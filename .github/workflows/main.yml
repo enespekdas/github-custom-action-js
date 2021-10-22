@@ -13,7 +13,7 @@ jobs:
       uses: enespekdas/github-custom-action-js@v1
 
       with:
-       name-of-user : 'Adil'
+       name-of-user : 'Enes'
     
     - name : Output of the TimeStamp
       run : echo "The time was ${{steps.myjsaction.outputs.time}}"
