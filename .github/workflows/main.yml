@@ -1,0 +1,19 @@
+on : [workflow_dispatch]
+
+jobs: 
+ custom-js-action-job:
+ 
+  runs-on : ubuntu-latest
+  
+  name : Custom JS gitHub Action
+  
+  steps:
+    - name : First GitHub Custom Action 
+      id : myjsaction
+      uses: enespekdas/github-custom-action-js@v1
+
+      with:
+       name-of-user : 'Adil'
+    
+    - name : Output of the TimeStamp
+      run : echo "The time was ${{steps.myjsaction.outputs.time}}"
